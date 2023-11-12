@@ -31,30 +31,6 @@ print("Dequeue:", my_queue.dequeue())  # Output: 1
 print("Is empty?", my_queue.is_empty())  # Output: False
 
 print("Queue size:", my_queue.size())  # Output: 2
-Lab qus 1
-class CircularQueue:
-    def _init_(self, capacity):
-        self.capacity = capacity
-        self.queue = [None] * capacity
-        self.front = self.rear = -1
 
-    def is_empty(self):
-        return self.front == -1
-
-    def is_full(self):
-        return (self.rear + 1) % self.capacity == self.front
-
-    def size(self):
-        if self.is_empty():
-            return 0
-        return (self.rear - self.front + self.capacity) % self.capacity + 1
-
-    def enqueue(self, item):
-        if self.is_full():
-            print("Queue is full. Cannot enqueue.")
-        else:
-            if self.is_empty():
-                self.front = self.rear = 0
-            else:
-                self.rear = (self.rear + 1) % self.capacity
-            self.queue[self.rear] = item
+     
+         
